@@ -9,7 +9,3 @@ class Definition:
     def get(self):
         df = pandas.read_csv('data.csv')
         return tuple(df.loc[df['word'] == self.term]['definition'])
-
-
-definition = Definition('sun')
-print(definition.get())
