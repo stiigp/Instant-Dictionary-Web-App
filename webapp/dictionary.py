@@ -1,15 +1,20 @@
 import justpy as jp
 from definition import Definition
+from webapp.layout import DefaultLayout
+from webapp.page import Page
 
 
-class Dictionary:
+class Dictionary(Page):
     path = '/dictionary'
 
     @classmethod
     def serve(cls, req):
         wp = jp.QuasarPage(tailwind=True)
 
-        div = jp.Div(a=wp,
+        lay = DefaultLayout(a=wp)
+        container = jp.QPageContainer(a=lay)
+
+        div = jp.Div(a=container,
                      classes='bg-gray-200'
                              ' h-screen')
 
