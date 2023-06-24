@@ -23,7 +23,7 @@ class Home(Page):
                        ' m-2')
 
         jp.Div(a=div,
-               text='Ih caralho, ele é foda!',
+               text='Welcome to the home page, click on the menu at the left to go to other pages.',
                classes='text-lg')
 
         return wp
